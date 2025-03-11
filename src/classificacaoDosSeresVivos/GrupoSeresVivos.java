@@ -10,11 +10,11 @@ public class GrupoSeresVivos implements SerVivo {
         setSeresVivos(new ArrayList<>());
     }
 
-    public void adicionar(SerVivo serVivo) {
+    public void adicionarSerVivo(SerVivo serVivo) {
         getSeresVivos().add(serVivo);
     }
 
-    public void remover(SerVivo serVivo) {
+    public void removerSerVivo(SerVivo serVivo) {
         getSeresVivos().remove(serVivo);
     }
 

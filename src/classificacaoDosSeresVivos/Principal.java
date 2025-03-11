@@ -13,13 +13,13 @@ public class Principal {
         GrupoSeresVivos grupo = new GrupoSeresVivos();
         
         // Adição de objetos individuais ao composto
-        grupo.adicionar(animalia);
-        grupo.adicionar(chordata);
-        grupo.adicionar(mammalia);
-        grupo.adicionar(primata);
-        grupo.adicionar(hominidae);
-        grupo.adicionar(homo);
-        grupo.adicionar(homoSapiens);
+        grupo.adicionarSerVivo(animalia);
+        grupo.adicionarSerVivo(chordata);
+        grupo.adicionarSerVivo(mammalia);
+        grupo.adicionarSerVivo(primata);
+        grupo.adicionarSerVivo(hominidae);
+        grupo.adicionarSerVivo(homo);
+        grupo.adicionarSerVivo(homoSapiens);
 
         // Operação uniforme sobre o composto
         grupo.mostrar();
