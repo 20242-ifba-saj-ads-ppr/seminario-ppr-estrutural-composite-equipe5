@@ -3,27 +3,32 @@ export_on_save:
   html: true
 ---
 
-# seminario-1
+# Equipe Singleton
 
-## Markdown
+## Padrão de Projeto Estrutural Composite 
+Intenção :
+
+    permitir a composição de objetos em estruturas de árvores para tratamento de cada estrutura como se fossem objetos individuais.
+
+Motivação:
+
+    Permitir a criação de obejtos complexos a partir de componentes simples. 
+    O cliente não precisa fazer a distinção entre objetos primitivos e recipientes pois a composição recursiva o faz.
+
+Aplicabilidade:
+
+    Deve-se utilizar o Composite quando os clientes queiram tratar dos objetos de forma uniforme na estrutura que é composta. Ou quando se queira representar hierarquias parte-todo;
+
+Contexto:
+
+    Classificar biologicamente os seres vivos em uma estrutura hierárquica. Para isso cada nível da hierarquia representa um elemnto individual, espécie por exemplo, ou um grupo que contenha varias espécies, uma filo.
+    As classes, Animalia, Chordata, Mamalia... representam, cada uma delas, as folhas (elas são elementos individuais que não contêm outros seres vivos). 
+    Já a classe GrupoSeresVivos pode conter tanto indivíduos quanto grupos já estabelecidos, formando um conjunto.
 
 
-- item
-- item
-- item
 
 
-
-1. valor
-2. valor
-3. valor
-
-| title1 | title2 |
-| ------ | ------ |
-| a      | b      |
-
-
-[Markdown](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+[Markdown]
 
 ## Plantuml
 
@@ -63,7 +68,6 @@ Animal <|-- Fish
 
 @enduml
 ```
-[PlantUML Class Diagram](https://plantuml.com/class-diagram)
 
 ## Mermaid
 

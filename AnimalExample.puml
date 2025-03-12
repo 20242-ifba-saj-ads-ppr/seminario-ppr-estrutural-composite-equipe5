@@ -1,0 +1,35 @@
+⚠️No PlantUML server, specify one with "plantuml.server".
+
+@startuml title: Animal example
+note "From Duck till Zebra" as n1
+class Animal{
+    +int age
+    +String gender
+    + boolean isMammal()
+    + void mate()
+}
+'para a heranca ficar para baixo
+class Duck extends Animal{
+    +String beakColor
+    +swim()
+    +quack()
+}
+class Fish{
+    -int sizeInFeet
+    -canEat()
+}
+class Zebra{    
+    +bool is_wild
+    +run()
+}
+
+class Duck
+note left: can fly\ncan swim\ncan dive\ncan help in debugging
+
+'para a heranca ficar para o lado
+Animal <|- Zebra 
+
+'para a heranca ficar para baixo
+Animal <|-- Fish 
+
+@enduml
