@@ -10,18 +10,18 @@ public class Principal {
         SerVivo homoSapiens = new HomoSapiens();
 
         // Criação do objeto composto (Componente Composto no padrão Composite)
-        GrupoSeresVivos grupo = new GrupoSeresVivos();
+        ClassificacaoSerVivo classificacaoHomoSapiens = new ClassificacaoSerVivo();
         
         // Adição de objetos individuais ao composto
-        grupo.adicionarSerVivo(animalia);
-        grupo.adicionarSerVivo(chordata);
-        grupo.adicionarSerVivo(mammalia);
-        grupo.adicionarSerVivo(primata);
-        grupo.adicionarSerVivo(hominidae);
-        grupo.adicionarSerVivo(homo);
-        grupo.adicionarSerVivo(homoSapiens);
+        classificacaoHomoSapiens.adicionarClassificacao(animalia);
+        classificacaoHomoSapiens.adicionarClassificacao(chordata);
+        classificacaoHomoSapiens.adicionarClassificacao(mammalia);
+        classificacaoHomoSapiens.adicionarClassificacao(primata);
+        classificacaoHomoSapiens.adicionarClassificacao(hominidae);
+        classificacaoHomoSapiens.adicionarClassificacao(homo);
+        classificacaoHomoSapiens.adicionarClassificacao(homoSapiens);
 
         // Operação uniforme sobre o composto
-        grupo.mostrar();
+        classificacaoHomoSapiens.mostrar();
     }
 }

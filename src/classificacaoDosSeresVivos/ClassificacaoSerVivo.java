@@ -3,18 +3,18 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class GrupoSeresVivos implements SerVivo {
+public class ClassificacaoSerVivo implements SerVivo {
     private List<SerVivo> seresVivos;
 
-    public GrupoSeresVivos() {
+    public ClassificacaoSerVivo() {
         setSeresVivos(new ArrayList<>());
     }
 
-    public void adicionarSerVivo(SerVivo serVivo) {
+    public void adicionarClassificacao(SerVivo serVivo) {
         getSeresVivos().add(serVivo);
     }
 
-    public void removerSerVivo(SerVivo serVivo) {
+    public void removerClassificacao(SerVivo serVivo) {
         getSeresVivos().remove(serVivo);
     }
 
