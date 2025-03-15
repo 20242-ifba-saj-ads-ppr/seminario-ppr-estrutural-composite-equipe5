@@ -1,17 +1,13 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class CompositeComputador implements Computador {
-    private List<Computador> componentes;
 
+    private List<Computador> componentes;
 
     public CompositeComputador() {
         setComponentes(new ArrayList<>());
-    }
-
-    @Override
-    public void mostrar() {
-       getComponentes().forEach(Computador::mostrar);
     }
 
     @Override
@@ -36,4 +32,14 @@ public class CompositeComputador implements Computador {
     public void setComponentes(List<Computador> componentes) {
         this.componentes = componentes;
     }
+
+    @Override
+    public String toString() {
+        return "{" + getClass().toString()
+                + ": componentes='" 
+                + getComponentes() 
+                + "'"
+                + "}";
+    }
+
 }

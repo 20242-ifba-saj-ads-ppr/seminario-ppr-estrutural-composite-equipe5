@@ -1,9 +1,7 @@
-public class Hd implements Computador {
-    @Override
-    public void mostrar() {
-        System.out.println("HD");
-    }
 
+public class Hd implements Computador {
+    private String marca;
+    
     @Override
     public void adicionar(Computador c) {
         // Método não suportado para folhas
@@ -18,5 +16,23 @@ public class Hd implements Computador {
     public Computador getFilho(int i) {
         // Método não suportado para folhas
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return "{"
+                + getClass().toString()
+                + ": marca='"
+                + getMarca()
+                + "'"
+                + "}";
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 }

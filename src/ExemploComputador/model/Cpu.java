@@ -1,8 +1,6 @@
+
 public class Cpu implements Computador {
-    @Override
-    public void mostrar() {
-        System.out.println("CPU");
-    }
+    private String marca;
 
     @Override
     public void adicionar(Computador c) {
@@ -20,5 +18,22 @@ public class Cpu implements Computador {
     public Computador getFilho(int i) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getFilho'");
+    }
+
+    @Override
+    public String toString() {
+        return "{"
+                + getClass().toString()
+                + ": marca='" + getMarca() 
+                + "'"
+                + "}";
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 }

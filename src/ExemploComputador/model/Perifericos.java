@@ -1,9 +1,5 @@
 public class Perifericos implements Computador {
-    @Override
-    public void mostrar() {
-        System.out.println("Periféricos");
-    }
-
+    private String tipo;
     @Override
     public void adicionar(Computador c) {
         // TODO Auto-generated method stub
@@ -20,6 +16,22 @@ public class Perifericos implements Computador {
     public Computador getFilho(int i) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getFilho'");
+    }
+    @Override
+    public String toString() {
+        return "{"
+                + getClass().toString()
+                + ": marca='"
+                + getTipo() 
+                + "'"
+                + "}";
+    }
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
     
     

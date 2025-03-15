@@ -1,9 +1,6 @@
-public class Gabinete implements Computador {
 
-    @Override
-    public void mostrar() {
-        System.out.println("Gabinete");
-    }
+public class Gabinete implements Computador {
+    private String tipo;
 
     @Override
     public void adicionar(Computador c) {
@@ -22,5 +19,23 @@ public class Gabinete implements Computador {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getFilho'");
     }
-    
+
+    @Override
+    public String toString() {
+        return "{"
+                + getClass().toString()
+                + ": tipo='" 
+                + getTipo() 
+                + "'"
+                + "}";
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
 }
