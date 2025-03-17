@@ -1,23 +1,32 @@
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Gabinete implements Computador {
     private String tipo;
+    private List<Computador> componentes;
+
+    public Gabinete() {
+    }
+    public Gabinete(String tipo) {
+        setComponentes(new ArrayList<>());
+        setTipo(tipo);
+    }
 
     @Override
     public void adicionar(Computador c) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'adicionar'");
+        getComponentes().add(c);
     }
 
     @Override
     public void remover(Computador c) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'remover'");
+        getComponentes().remove(c);
     }
 
     @Override
     public Computador getFilho(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getFilho'");
+        return getComponentes().get(i);
     }
 
     @Override
@@ -25,7 +34,9 @@ public class Gabinete implements Computador {
         return "{"
                 + getClass().toString()
                 + ": tipo='" 
-                + getTipo() 
+                + getTipo()
+                + "', componentes='"
+                + getComponentes()
                 + "'"
                 + "}";
     }
@@ -36,6 +47,14 @@ public class Gabinete implements Computador {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public List<Computador> getComponentes() {
+        return componentes;
+    }
+
+    public void setComponentes(List<Computador> componentes) {
+        this.componentes = componentes;
     }
 
 }
