@@ -1,6 +1,12 @@
 public class Teclado implements Computador{
     private String marca;
     
+    public Teclado() {
+    }
+
+    public Teclado(String marca) {
+        setMarca(marca);
+    }
     @Override
     public void adicionar(Computador c) {
         // Método não suportado para folhas
