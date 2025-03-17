@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Gabinete implements Computador {
+public class Gabinete implements Componente {
     private String tipo;
-    private List<Computador> componentes;
+    private List<Componente> componentes;
 
     public Gabinete() {
     }
@@ -15,17 +15,17 @@ public class Gabinete implements Computador {
     }
 
     @Override
-    public void adicionar(Computador c) {
+    public void adicionar(Componente c) {
         getComponentes().add(c);
     }
 
     @Override
-    public void remover(Computador c) {
+    public void remover(Componente c) {
         getComponentes().remove(c);
     }
 
     @Override
-    public Computador getFilho(int i) {
+    public Componente getFilho(int i) {
         return getComponentes().get(i);
     }
 
@@ -49,11 +49,11 @@ public class Gabinete implements Computador {
         this.tipo = tipo;
     }
 
-    public List<Computador> getComponentes() {
+    public List<Componente> getComponentes() {
         return componentes;
     }
 
-    public void setComponentes(List<Computador> componentes) {
+    public void setComponentes(List<Componente> componentes) {
         this.componentes = componentes;
     }
 

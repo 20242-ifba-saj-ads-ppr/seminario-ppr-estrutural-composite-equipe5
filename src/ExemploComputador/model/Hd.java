@@ -1,5 +1,5 @@
 
-public class Hd implements Computador {
+public class Hd implements Componente {
     private String marca;
 
     public Hd() {
@@ -10,17 +10,17 @@ public class Hd implements Computador {
     }
     
     @Override
-    public void adicionar(Computador c) {
+    public void adicionar(Componente c) {
         // Método não suportado para folhas
     }
 
     @Override
-    public void remover(Computador c) {
+    public void remover(Componente c) {
         // Método não suportado para folhas
     }
 
     @Override
-    public Computador getFilho(int i) {
+    public Componente getFilho(int i) {
         // Método não suportado para folhas
         return null;
     }
