@@ -28,7 +28,7 @@ public class Hd implements Computador {
     @Override
     public String toString() {
         return "{"
-                + getClass().toString()
+                + getClass().getName().toString()
                 + ": marca='"
                 + getMarca()
                 + "'"
