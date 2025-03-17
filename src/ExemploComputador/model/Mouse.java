@@ -1,5 +1,12 @@
 public class Mouse implements Computador {
     private String marca;
+
+    public Mouse() {
+    }
+
+    public Mouse(String marca) {
+        setMarca(marca);
+    }
     
     @Override
     public void adicionar(Computador c) {
