@@ -2,15 +2,19 @@
 public class Cpu implements Computador {
     private String marca;
 
+    public Cpu(String marca) {
+        setMarca(marca);
+    }
+
     @Override
     public void adicionar(Computador c) {
-        // TODO Auto-generated method stub
+        // Objeto Folha não suporta essa operação
         throw new UnsupportedOperationException("Unimplemented method 'adicionar'");
     }
 
     @Override
     public void remover(Computador c) {
-        // TODO Auto-generated method stub
+        // Objeto Folha não suporta essa operação
         throw new UnsupportedOperationException("Unimplemented method 'remover'");
     }
 
