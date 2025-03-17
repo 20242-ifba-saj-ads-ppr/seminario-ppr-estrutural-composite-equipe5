@@ -174,6 +174,16 @@ classDiagram
 @import "src/ExemploComputador/model/Main.java"
 
 
+# Outro Exemplo:
+Com Lego Podemos pegar peças simples, como um bloco vermelho ou uma roda, e montá-las para formar algo maior, como um carro de Lego. Esse carro, por sua vez, pode fazer parte de uma estrutura maior, como uma garagem.
+O Composite se aplica porque cada estrutura maior também "é um" Lego, assim como as peças individuais. O comportamento de montar e desmontar se propaga recursivamente, garantindo que a ação seja aplicada a toda a estrutura hierárquica."
+
+Participantes:
+Lego: Interface;
+PecaLego: uma leaf;
+EstruturaLego: composite;
+
+
 [Mermaid Class Diagram](https://mermaid.js.org/syntax/classDiagram.html)
 
 

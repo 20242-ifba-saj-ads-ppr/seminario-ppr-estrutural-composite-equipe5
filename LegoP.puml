@@ -1,0 +1,31 @@
+@startuml
+title Composite - Lego
+
+interface Lego {
+    +exibir()
+    +montar()
+    +desmontar()
+}
+
+class PecaLego {
+    - String nome
+    +exibir()
+    +montar()
+    +desmontar()
+}
+
+class EstruturaLego {
+    - String nome
+    - List<Lego> pecas
+    +adicionarPeca(Lego peca)
+    +removerPeca(Lego peca)
+    +exibir()
+    +montar()
+    +desmontar()
+}
+
+Lego <|-- PecaLego
+Lego <|-- EstruturaLego
+EstruturaLego o-- "*" Lego : "contém várias peças"
+
+@enduml
