@@ -1,6 +1,13 @@
 
 public class Hd implements Computador {
     private String marca;
+
+    public Hd() {
+    }
+
+    public Hd(String marca) {
+        setMarca(marca);
+    }
     
     @Override
     public void adicionar(Computador c) {
