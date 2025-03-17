@@ -1,28 +1,38 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class PlacaMae implements Computador {
     private String tipo;
+    private List<Computador> componentes;
+    
+    public PlacaMae() {
+    }
+    public PlacaMae(String tipo) {
+        setTipo(tipo);
+        setComponentes(new ArrayList<>());
+    }
     @Override
     public void adicionar(Computador c) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'adicionar'");
+        getComponentes().add(c);
     }
 
     @Override
     public void remover(Computador c) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'remover'");
+        getComponentes().remove(c);
     }
 
     @Override
     public Computador getFilho(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getFilho'");
+        return getComponentes().get(i);
     }
     @Override
     public String toString() {
         return "{"
                 + getClass().toString()
                 + ": marca='" 
-                + getTipo() 
+                + getTipo()
+                + "', componentes='"
+                + getComponentes()
                 + "'"
                 + "}";
     }
@@ -33,5 +43,13 @@ public class PlacaMae implements Computador {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public List<Computador> getComponentes() {
+        return componentes;
+    }
+
+    public void setComponentes(List<Computador> componentes) {
+        this.componentes = componentes;
     }
 }
