@@ -21,82 +21,158 @@ Aplicabilidade:
 
 Contexto:
 
-    Classificar biologicamente os seres vivos em uma estrutura hierárquica. Para isso cada nível da hierarquia representa um elemnto individual, espécie por exemplo, ou um grupo que contenha varias espécies, uma filo.
-    As classes, Animalia, Chordata, Mamalia... representam, cada uma delas, as folhas (elas são elementos individuais que não contêm outros seres vivos). 
-    Já a classe ClassificaçãoSerVivo pode conter tanto indivíduos quanto grupos já estabelecidos, formando um conjunto.
+    Podemos exemplificar a utilização deste padrão estrutural quando o nosso cenário é um computador. Nisso, cada parte microscopica (componentes, subcomponentes) faz parte do todo - a estrutura macro que é o proprio computador. 
+    O composite fica explicito quando por exemplo, nós temos um cabinete, que é composto por um HD e uma Placa - Mãe, dentro dela, nos temos a RAM e a CPU. Logo, os objetos folhas são as estruturas micrioscopicas que são finais na estrutura hierarquica do computador.
 
 [Markdown]
-### Outro exemplo
-### Plantuml
+
+### Diagramas do contexto 
+## Plantuml
 
 ```plantuml {align="center"}
 @startuml
-title: Animal example
-note "From Duck till Zebra" as n1
-class Animal{
-    +int age
-    +String gender
-    + boolean isMammal()
-    + void mate()
-}
-'para a heranca ficar para baixo
-class Duck extends Animal{
-    +String beakColor
-    +swim()
-    +quack()
-}
-class Fish{
-    -int sizeInFeet
-    -canEat()
-}
-class Zebra{    
-    +bool is_wild
-    +run()
+title: Exemplo Computador
+interface Componente {
+    +exibir(): void
 }
 
-class Duck
-note left: can fly\ncan swim\ncan dive\ncan help in debugging
+class Computador {
+    +adicionar(Componente): void
+    +remover(Componente): void
+    +exibir(): void
+}
 
-'para a heranca ficar para o lado
-Animal <|- Zebra 
+class Gabinete implements Componente {
+    +exibir(): void
+}
+class Hd implements Componente {
+    +exibir(): void
+}
+class PlacaMae implements Componente {
+    +exibir(): void
+}
+class Ram implements Componente {
+    +exibir(): void
+}
+class Cpu implements Componente {
+    +exibir(): void
+}
+class Monitor implements Componente {
+    +exibir(): void
+}
+class Mouse implements Componente {
+    +exibir(): void
+}
+class Teclado implements Componente {
+    +exibir(): void
+}
+class Perifericos implements Componente {
+    +exibir(): void
+}
 
-'para a heranca ficar para baixo
-Animal <|-- Fish 
-
+Computador o-- Gabinete
+Computador o-- Perifericos
+Gabinete o-- Hd
+Gabinete o-- PlacaMae
+PlacaMae o-- Ram
+PlacaMae o-- Cpu
+Perifericos o-- Monitor
+Perifericos o-- Mouse
+Perifericos o-- Teclado
 @enduml
 ```
 
-### Mermaid
+## Mermaid
 
 ```mermaid {align="center"}
 ---
-title: Animal example
+title: Exemplo Computador
 ---
 classDiagram
-    note "From Duck till Zebra"
-    Animal <|-- Duck
-    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-        +String beakColor
-        +swim()
-        +quack()
-    }
-    class Fish{
-        -int sizeInFeet
-        -canEat()
-    }
-    class Zebra{
-        +bool is_wild
-        +run()
-    }
+    Computador o-- Gabinete
+    Computador o-- Perifericos
+    Gabinete o-- Hd
+    Gabinete o-- PlacaMae
+    PlacaMae o-- Ram
+    PlacaMae o-- Cpu
+    Perifericos o-- Monitor
+    Perifericos o-- Mouse
+    Perifericos o-- Teclado
 
+    class Componente {
+        +exibir(): void
+    }
+    class Computador {
+        +adicionar(Componente): void
+        +remover(Componente): void
+        +exibir(): void
+    }
+    class Gabinete {
+        +exibir(): void
+    }
+    class Hd {
+        +exibir(): void
+    }
+    class PlacaMae {
+        +exibir(): void
+    }
+    class Ram {
+        +exibir(): void
+    }
+    class Cpu {
+        +exibir(): void
+    }
+    class Monitor {
+        +exibir(): void
+    }
+    class Mouse {
+        +exibir(): void
+    }
+    class Teclado {
+        +exibir(): void
+    }
+    class Perifericos {
+        +exibir(): void
+    }
 ```
+
+## Códigos do Contexto
+
+### Interface
+
+@import "./src/ExemploComputador/model/Computador.java"
+
+## Composite Computador
+
+@import "src/ExemploComputador/model/CompositeComputador.java"
+
+### Composites
+
+@import "src/ExemploComputador/model/Gabinete.java"
+
+@import "src/ExemploComputador/model/PlacaMae.java"
+
+@import "src/ExemploComputador/model/Perifericos.java"
+
+### Folhas 
+
+@import "src/ExemploComputador/model/Cpu.java"
+
+@import "src/ExemploComputador/model/Hd.java"
+
+@import "src/ExemploComputador/model/Monitor.java"
+
+@import "src/ExemploComputador/model/Mouse.java"
+
+@import "src/ExemploComputador/model/Ram.java"
+
+@import "src/ExemploComputador/model/Teclado.java"
+
+### Main
+
+
+@import "src/ExemploComputador/model/Main.java"
+
 
 [Mermaid Class Diagram](https://mermaid.js.org/syntax/classDiagram.html)
 
@@ -106,7 +182,7 @@ classDiagram
 [Markdown Preview Enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/)
 
 
-@import "src/Classe.java"
+
 
 ### HTML Export
 
