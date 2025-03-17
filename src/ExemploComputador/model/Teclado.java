@@ -28,7 +28,7 @@ public class Teclado implements Computador{
     @Override
     public String toString() {
         return "{"
-                + getClass().toString()
+                + getClass().getName().toString()
                 + ": marca='"
                 + getMarca()
                 + "'"
