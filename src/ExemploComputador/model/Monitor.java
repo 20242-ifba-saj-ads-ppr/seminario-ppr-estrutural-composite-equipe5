@@ -1,5 +1,5 @@
 
-public class Monitor implements Computador {
+public class Monitor implements Componente {
     private String marca;
 
     public Monitor() {
@@ -10,19 +10,19 @@ public class Monitor implements Computador {
     }
 
     @Override
-    public void adicionar(Computador c) {
+    public void adicionar(Componente c) {
         // Método não suportado para folhas
         throw new UnsupportedOperationException("Unimplemented method 'adicionar'");
     }
 
     @Override
-    public void remover(Computador c) {
+    public void remover(Componente c) {
         // Método não suportado para folhas
         throw new UnsupportedOperationException("Unimplemented method 'remover'");
     }
 
     @Override
-    public Computador getFilho(int i) {
+    public Componente getFilho(int i) {
         // Método não suportado para folhas
         throw new UnsupportedOperationException("Unimplemented method 'getFilho'");
     }
