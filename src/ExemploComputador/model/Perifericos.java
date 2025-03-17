@@ -1,5 +1,16 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Perifericos implements Computador {
     private String tipo;
+    private List<Computador> componentes;
+    
+    public Perifericos() {
+    }
+    public Perifericos(String tipo) {
+        setTipo(tipo);
+        setComponentes(new ArrayList<>());
+    }
     @Override
     public void adicionar(Computador c) {
         // TODO Auto-generated method stub
@@ -22,7 +33,9 @@ public class Perifericos implements Computador {
         return "{"
                 + getClass().toString()
                 + ": marca='"
-                + getTipo() 
+                + getTipo()
+                + "', componentes='"
+                + getComponentes()
                 + "'"
                 + "}";
     }
@@ -32,6 +45,14 @@ public class Perifericos implements Computador {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public List<Computador> getComponentes() {
+        return componentes;
+    }
+
+    public void setComponentes(List<Computador> componentes) {
+        this.componentes = componentes;
     }
     
     
