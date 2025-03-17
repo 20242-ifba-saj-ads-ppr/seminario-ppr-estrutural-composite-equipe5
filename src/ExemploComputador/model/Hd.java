@@ -1,0 +1,45 @@
+
+public class Hd implements Computador {
+    private String marca;
+
+    public Hd() {
+    }
+
+    public Hd(String marca) {
+        setMarca(marca);
+    }
+    
+    @Override
+    public void adicionar(Computador c) {
+        // Método não suportado para folhas
+    }
+
+    @Override
+    public void remover(Computador c) {
+        // Método não suportado para folhas
+    }
+
+    @Override
+    public Computador getFilho(int i) {
+        // Método não suportado para folhas
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return "{"
+                + getClass().getName().toString()
+                + ": marca='"
+                + getMarca()
+                + "'"
+                + "}";
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+}
