@@ -2,6 +2,6 @@ package ExemploLego;
 
 public interface Lego {
     void exibir();
-    void monstar();
+    void montar();
     void desmontar();
 }

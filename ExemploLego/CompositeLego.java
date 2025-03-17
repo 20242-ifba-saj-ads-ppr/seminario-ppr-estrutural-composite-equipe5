@@ -18,24 +18,23 @@ public class CompositeLego {
         garagem.adicionarPeca(carro);
         garagem.adicionarPeca(new PecaLego("Placa de identificação"));
 
-                // Exibindo as estruturas
-                System.out.println("\n🔹 Exibindo o carro:");
-                carro.exibir();
+        // Exibindo as estruturas
+        System.out.println("\n🔹 Exibindo o carro:");
+        carro.exibir();
         
-                System.out.println("\n🔹 Montando o carro:");
-                carro.montar();
+        System.out.println("\n🔹 Montando o carro:");
+        carro.montar();
         
-                System.out.println("\n🔹 Desmontando o carro:");
-                carro.desmontar();
+        System.out.println("\n🔹 Desmontando o carro:");
+        carro.desmontar();
         
-                System.out.println("\n🔹 Exibindo a garagem:");
-                garagem.exibir();
+        System.out.println("\n🔹 Exibindo a garagem:");
+        garagem.exibir();
         
-                System.out.println("\n🔹 Montando a garagem:");
-                garagem.montar();
+        System.out.println("\n🔹 Montando a garagem:");
+        garagem.montar();
         
-                System.out.println("\n🔹 Desmontando a garagem:");
-                garagem.desmontar();
-            }
-        }
+        System.out.println("\n🔹 Desmontando a garagem:");
+        garagem.desmontar();
+    }
 }

@@ -3,8 +3,8 @@ package ExemploLego;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EstruturaLego implements Lego{
-        private String nome;
+public class EstruturaLego implements Lego {
+    private String nome;
     private List<Lego> pecas = new ArrayList<>();
 
     public EstruturaLego(String nome) {
