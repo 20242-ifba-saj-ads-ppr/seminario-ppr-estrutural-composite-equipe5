@@ -13,20 +13,17 @@ public class Perifericos implements Computador {
     }
     @Override
     public void adicionar(Computador c) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'adicionar'");
+        getComponentes().add(c);
     }
 
     @Override
     public void remover(Computador c) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'remover'");
+        getComponentes().remove(c);
     }
 
     @Override
     public Computador getFilho(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getFilho'");
+        return getComponentes().get(i);
     }
     @Override
     public String toString() {
